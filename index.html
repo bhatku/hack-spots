@@ -59,9 +59,9 @@
 
     <script id="hackSpotsTable" type="text/html">
         <table>
-            <tr><th class="tHeader">Name</th><th class="tHeader">Address</th><th class="tHeader">City</th><th class="tHeader">State</th><th class="tHeader">Country</th><th class="">Elsewhere</th></tr>
+            <tr><th class="tHeader">When?</th><th class="tHeader">Purpose</th><th class="tHeader">Where</th><th class="tHeader">State</th><th class="">Elsewhere</th></tr>
             {{#rows}}
-                <tr id="{{rowNumber}}" class="spotRow"><td>{{name}}</td><td>{{address}}</td><td>{{city}}</td><td>{{name}}</td><td>{{desh}}</td><td><a class="button" href="https://maps.google.com/maps?q={{address}},{{city}},{{state}}" target="_blank">G Map</a> </td></tr>
+                <tr id="{{rowNumber}}" class="spotRow"><td>{{When?}}</td><td>{{Purpose}}</td><td>{{Where}}</td><td>{{state}}</td><td><a class="button" href="https://maps.google.com/maps?q={{city}},{{state}}" target="_blank">G Map</a> </td></tr>
             {{/rows}}
         </table>
     </script>
@@ -69,21 +69,19 @@
     <script id="latestSpot" type="text/html">
         {{#rows}}
             <h4 class="fauxButton">MOST RECENT SPOT</h4>
-            <h2>{{name}}</h2>
-            <p class="colorText">{{address}}<p>
-            <p class="colorText">{{city}}{{#state}}, {{state}}{{/state}}{{#postcode}}, {{postcode}}{{/postcode}}</p>
+            <h2>{{Purpose}}</h2>
+            <p class="colorText">{{When}}<p>
+            <p class="colorText">{{Where}}<p>
+            <p class="colorText">{{city}}{{#state}}, {{state}}{{/state}}}</p>
             <ul>
-                <li><span class="category">Wifi:</span> {{wifipassword}}</li>
-                <li><span class="category">Outlets:</span> {{outlets}}</li>
+                <li><span class="category">About:</span> {{about}}</li>
+                <li><span class="category">People/Org:</span> {{People/Org}}</li>
                 <li><span class="category">Couch:</span> {{couch}}</li>
-                <li><span class="category">Large Table:</span> {{largetable}}</li>
-                <li><span class="category">Outdoor Seating:</span> {{outdoorseating}}</li>
-                <li><span class="category">Brewing:</span> {{brewing}}</li>
-                <li><span class="category">Contributed By:</span> <a href="http://www.twitter.com/{{contributerstwitter}}" target="_blank">@{{contributerstwitter}}</a></li>
+               
             </ul>
             <ul>
                 <li><a href="https://maps.google.com/maps?q={{address}},{{city}},{{state}}" target="_blank">View in Google Maps</a></li>
-                <li><a href="http://www.yelp.com/search?find_desc={{name}}&find_loc={{city}},{{state}}" target="_blank">Find on Yelp</a></li>
+                
             </ul>
         {{/rows}}
     </script>
@@ -95,20 +93,19 @@
     <script id="selectedSpot" type="text/html">
         {{#rows}}
             <h4 class="fauxButton">SELECTED SPOT</h4>
-            <h2>{{name}}</h2>
-            <p class="colorText">{{address}}<p>
-            <p class="colorText">{{city}}{{#state}}, {{state}}{{/state}}{{#postcode}}, {{postcode}}{{/postcode}}</p>
+             <h2>{{Purpose}}</h2>
+            <p class="colorText">{{When}}<p>
+            <p class="colorText">{{Where}}<p>
+            <p class="colorText">{{city}}{{#state}}, {{state}}{{/state}}}</p>
             <ul>
-                <li><span class="category">Wifi:</span> {{wifipassword}}</li>
-                <li><span class="category">Outlets:</span> {{outlets}}</li>
+                <li><span class="category">About:</span> {{about}}</li>
+                <li><span class="category">People/Org:</span> {{People/Org}}</li>
                 <li><span class="category">Couch:</span> {{couch}}</li>
-                <li><span class="category">Large Table:</span> {{largetable}}</li>
-                <li><span class="category">Outdoor Seating:</span> {{outdoorseating}}</li>
-                <li><span class="category">Brewing:</span> {{brewing}}</li>
+               
             </ul>
             <ul>
                 <li><a href="https://maps.google.com/maps?q={{address}},{{city}},{{state}}" target="_blank">View in Google Maps</a></li>
-                <li><a href="http://www.yelp.com/search?find_desc={{name}}&find_loc={{city}},{{state}}" target="_blank">Find on Yelp</a></li>
+                
             </ul>
         {{/rows}}
     </script>
