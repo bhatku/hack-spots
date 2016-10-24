@@ -61,7 +61,7 @@
         <table>
             <tr><th class="tHeader">When?</th><th class="tHeader">Purpose</th><th class="tHeader">Where</th><th class="tHeader">State</th><th class="">Elsewhere</th></tr>
             {{#rows}}
-                <tr id="{{rowNumber}}" class="spotRow"><td>{{When?}}</td><td>{{Purpose}}</td><td>{{Where}}</td><td>{{state}}</td><td><a class="button" href="https://maps.google.com/maps?q={{city}},{{state}}" target="_blank">G Map</a> </td></tr>
+                <tr id="{{rowNumber}}" class="spotRow"><td>{{Postcode}}</td><td>{{Name}}</td><td>{{Address}}</td><td>{{state}}</td><td><a class="button" href="https://maps.google.com/maps?q={{city}},{{state}}" target="_blank">G Map</a> </td></tr>
             {{/rows}}
         </table>
     </script>
@@ -69,13 +69,13 @@
     <script id="latestSpot" type="text/html">
         {{#rows}}
             <h4 class="fauxButton">MOST RECENT SPOT</h4>
-            <h2>{{Purpose}}</h2>
+            <h2>{{name}}</h2>
             <p class="colorText">{{When}}<p>
             <p class="colorText">{{Where}}<p>
             <p class="colorText">{{city}}{{#state}}, {{state}}{{/state}}}</p>
             <ul>
-                <li><span class="category">About:</span> {{about}}</li>
-                <li><span class="category">People/Org:</span> {{People/Org}}</li>
+                <li><span class="category">About:</span> {{outlets}}</li>
+                <li><span class="category">People/Org:</span> {{Wifi Password}}</li>
                 <li><span class="category">Couch:</span> {{couch}}</li>
                
             </ul>
@@ -93,13 +93,13 @@
     <script id="selectedSpot" type="text/html">
         {{#rows}}
             <h4 class="fauxButton">SELECTED SPOT</h4>
-             <h2>{{Purpose}}</h2>
+             <h2>{{Name}}</h2>
             <p class="colorText">{{When}}<p>
             <p class="colorText">{{Where}}<p>
             <p class="colorText">{{city}}{{#state}}, {{state}}{{/state}}}</p>
             <ul>
-                <li><span class="category">About:</span> {{about}}</li>
-                <li><span class="category">People/Org:</span> {{People/Org}}</li>
+                <li><span class="category">About:</span> {{outlets}}</li>
+                <li><span class="category">People/Org:</span> {{Wifi Password}}</li>
                 <li><span class="category">Couch:</span> {{couch}}</li>
                
             </ul>
